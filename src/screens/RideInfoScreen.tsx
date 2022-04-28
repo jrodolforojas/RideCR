@@ -1,67 +1,62 @@
 import React from 'react'
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import { FadeInImage } from '../components/FadeInImage'
+import { InformationText } from '../components/InformationText'
+import FontAwesome from 'react-native-vector-icons/FontAwesome'
 
 export const RideInfoScreen = () => {
-  // TODO: Adjust them using flex properties
   return (
     <View style={styles.container}>
       <FadeInImage uri={"https://rickandmortyapi.com/api/character/avatar/1.jpeg"} style={styles.profileImage}/>
-      <Text style={styles.profileNameText}>Rick Sanchez</Text>
 
-      <View style={{marginTop: 50}}>
-        {/* TODO: Convert it to a component */}
-        <View style={{flexDirection: 'row'}}>
-          <Text style={{fontSize: 20, marginRight: 5, color: '#000'}}>Origen:</Text>
-          <Text style={styles.text}>San Carlos</Text>
-        </View>
+      <View style={{flex:1}}>
+        <Text style={styles.profileNameText}>Rick Sanchez</Text>
 
-        <View style={{flexDirection: 'row'}}>
-          <Text style={{fontSize: 20, marginRight: 5, color: '#000'}}>Destino:</Text>
-          <Text style={styles.text}>San Pedro</Text>
-        </View>
-
-        <View style={{flexDirection: 'row'}}>
-          <Text style={{fontSize: 20, marginRight: 5, color: '#000'}}>Hora:</Text>
-          <Text style={styles.text}>10:00 AM</Text>
-        </View>
-
-        <View style={{flexDirection: 'row'}}>
-          <Text style={{fontSize: 20, marginRight: 5, color: '#000'}}>Campo:</Text>
-          <Text style={styles.text}>2</Text>
-        </View>
-
+        <InformationText title="Origen" value="San Carlos"/>
+        <InformationText title="Destino" value="San Pedro"/>
+        <InformationText title="Hora" value="10:00 AM"/>
+        <InformationText title="Campos" value="2"/>
       </View>
 
-      <View style={{marginTop: 100}}>
-        <TouchableOpacity style={{backgroundColor: 'green', width: 300, height: 50, borderRadius: 5, alignItems: 'center'}}>
-          <Text style={{fontWeight: 'bold', fontSize: 30, color: 'white'}}>Contactar</Text>
-        </TouchableOpacity>
-      </View>
-
+      {/* TODO: Install icon dependencies for IOS */}
+      <TouchableOpacity style={{margin: 20, backgroundColor: '#43AA8B', alignSelf: 'stretch', borderRadius: 10}}>
+        <View style={{alignItems: 'center', flexDirection: 'row', justifyContent: 'center'}}>
+          <FontAwesome name="whatsapp" style={{marginRight: 10}} size={30} color="white" />
+          <Text style={{fontSize: 30, fontWeight: 'bold', color: 'white', padding: 10}}>Contactar</Text>
+        </View>
+      </TouchableOpacity>
     </View>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
-    marginVertical: 20,
-    justifyContent: 'center',
+    flex:1,
     alignItems: 'center'
   },
   profileImage: {
-    padding: 30,
     width: 300,
-    height: 300
+    height: 300,
+    borderRadius: 5,
+    marginVertical: 20
   },
   profileNameText: {
     color: '#000',
+    width: 200,
+    height: 50,
     fontSize: 30,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   },
   text: {
-    color: '#000',
-    fontSize: 20,
+    width: 100,
+    height: 50,
+    fontSize: 30,
     fontWeight: 'bold',
+  },
+  button: {
+    backgroundColor: 'green', 
+    width: '100%', 
+    height: 100, 
+    borderRadius: 5,
   }
 })
