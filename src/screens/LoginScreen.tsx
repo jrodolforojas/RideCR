@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { KeyboardAvoidingView, Platform, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
 
 export const LoginScreen = () => {
@@ -14,15 +14,34 @@ export const LoginScreen = () => {
         </View>
 
         {/* Text inputs */}
-        <View style={styles.textInputsContainer}>
-          <TextInput placeholder="email" style={styles.inputContainer}/>
-          <TextInput placeholder="password" style={styles.inputContainer} secureTextEntry={true}/>
-        </View>
+        <KeyboardAvoidingView 
+          style={styles.textInputsContainer}
+          behavior={(Platform.OS === 'ios') ? 'padding' : 'height'}>
 
-        {/* Login Button */}
-        <TouchableOpacity style={styles.button}>
-          <Text style={{fontSize: 25, fontWeight: 'bold',color: '#F7F9F9'}}>Login</Text>
-        </TouchableOpacity>
+            <Text style={styles.textInputTitle}>Email</Text>
+            <TextInput
+              style={styles.inputContainer}
+              keyboardType="email-address"
+              autoCapitalize={"none"}
+              autoCorrect={false}
+              />
+
+            <Text style={styles.textInputTitle}>Password</Text>
+            <TextInput 
+              style={styles.inputContainer} 
+              secureTextEntry={true}/>
+
+            {/* Login Button */}
+            <View style={{alignSelf: 'center'}}>
+              <TouchableOpacity style={styles.button}>
+                <Text style={{fontSize: 20, fontWeight: 'bold',color: '#F7F9F9', paddingHorizontal: 10}}>Login</Text>
+              </TouchableOpacity>
+            </View>
+
+            <TouchableOpacity style={{alignSelf: 'flex-start', marginTop: 10}}>
+              <Text>Don't have account?Create an account</Text>
+            </TouchableOpacity>
+        </KeyboardAvoidingView>
     </View>
   )
 }
@@ -50,24 +69,29 @@ const styles = StyleSheet.create({
   },
   inputContainer: {
     width: 300,
-    height: 60,
+    height: 50,
     marginVertical: 10,
     backgroundColor: '#F7F9F9',
-    color: '#127475',
+    color: '#051923',
     borderRadius: 10,
-    padding: 20,
     fontSize: 15,
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   textInputsContainer: {
     flex: 1,
-    marginVertical: 50,
+    marginVertical: 30,
+  },
+  textInputTitle: {
+    fontSize: 15,
+    color: '#051923'
   },
   button: {
-    width: 200, 
+    width: 170, 
     height: 50,
-    borderRadius: 10,
+    borderRadius: 100,
+    marginTop: 10,
     backgroundColor: '#DD6E42',
-    marginBottom: 40,
     alignItems: 'center',
     justifyContent: 'center'
   }
