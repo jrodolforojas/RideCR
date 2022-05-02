@@ -7,9 +7,9 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome'
 export const RideInfoScreen = () => {
   return (
     <View style={styles.container}>
-      <FadeInImage uri={"https://rickandmortyapi.com/api/character/avatar/1.jpeg"} style={styles.profileImage}/>
+      <FadeInImage uri={'https://rickandmortyapi.com/api/character/avatar/1.jpeg'} style={styles.profileImage}/>
 
-      <View style={{flex:1}}>
+      <View style={{ flex: 1 }}>
         <Text style={styles.profileNameText}>Rick Sanchez</Text>
 
         <InformationText title="Origen" value="San Carlos"/>
@@ -19,10 +19,10 @@ export const RideInfoScreen = () => {
       </View>
 
       {/* TODO: Install icon dependencies for IOS */}
-      <TouchableOpacity style={{margin: 20, backgroundColor: '#43AA8B', alignSelf: 'stretch', borderRadius: 10}}>
-        <View style={{alignItems: 'center', flexDirection: 'row', justifyContent: 'center'}}>
-          <FontAwesome name="whatsapp" style={{marginRight: 10}} size={30} color="white" />
-          <Text style={{fontSize: 30, fontWeight: 'bold', color: 'white', padding: 10}}>Contactar</Text>
+      <TouchableOpacity style={{ margin: 20, backgroundColor: '#43AA8B', alignSelf: 'stretch', borderRadius: 10 }}>
+        <View style={{ alignItems: 'center', flexDirection: 'row', justifyContent: 'center' }}>
+          <FontAwesome name="whatsapp" style={{ marginRight: 10 }} size={30} color="white" />
+          <Text style={{ fontSize: 30, fontWeight: 'bold', color: 'white', padding: 10 }}>Contactar</Text>
         </View>
       </TouchableOpacity>
     </View>
@@ -31,7 +31,7 @@ export const RideInfoScreen = () => {
 
 const styles = StyleSheet.create({
   container: {
-    flex:1,
+    flex: 1,
     alignItems: 'center'
   },
   profileImage: {
@@ -45,18 +45,18 @@ const styles = StyleSheet.create({
     width: 200,
     height: 50,
     fontSize: 30,
-    fontWeight: 'bold',
+    fontWeight: 'bold'
   },
   text: {
     width: 100,
     height: 50,
     fontSize: 30,
-    fontWeight: 'bold',
+    fontWeight: 'bold'
   },
   button: {
-    backgroundColor: 'green', 
-    width: '100%', 
-    height: 100, 
-    borderRadius: 5,
+    backgroundColor: 'green',
+    width: '100%',
+    height: 100,
+    borderRadius: 5
   }
 })

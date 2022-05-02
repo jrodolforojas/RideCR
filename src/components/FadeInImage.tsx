@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { ActivityIndicator, Animated, ImageErrorEventData, ImageStyle, NativeSyntheticEvent, StyleProp, View } from 'react-native'
-import { useAnimation } from '../hooks/useAnimation';
-
+import { useAnimation } from '../hooks/useAnimation'
 
 interface Props {
     uri: string;
@@ -9,24 +8,26 @@ interface Props {
 }
 
 export const FadeInImage = ({ uri, style = {} }: Props) => {
+  const { opacity, fadeIn } = useAnimation()
+  const [isLoading, setIsLoading] = useState(true)
 
-    const { opacity, fadeIn } = useAnimation();
-    const [isLoading, setIsLoading] = useState(true);
+  const finishLoading = () => {
+    setIsLoading(false)
+    fadeIn()
+  }
 
-    const finishLoading = () => {
-        setIsLoading(false);
-        fadeIn();
+  const onError = (err: NativeSyntheticEvent<ImageErrorEventData>) => {
+    if (err) {
+      console.log('err: ', err)
     }
+    setIsLoading(false)
+  }
 
-    const onError = (err: NativeSyntheticEvent<ImageErrorEventData>) => {
-        setIsLoading(false);
-    }
-
-    return (
+  return (
         <View style={{
-            justifyContent: 'center',
-            alignItems: 'center',
-            ...style as any,
+          justifyContent: 'center',
+          alignItems: 'center',
+          ...style as any
         }}>
 
             {
@@ -43,11 +44,11 @@ export const FadeInImage = ({ uri, style = {} }: Props) => {
                 onError={onError}
                 onLoad={finishLoading}
                 style={{
-                    ...style as any,
-                    opacity
+                  ...style as any,
+                  opacity
                 }}
             />
 
         </View>
-    )
+  )
 }

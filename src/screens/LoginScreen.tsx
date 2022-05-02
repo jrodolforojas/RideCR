@@ -14,7 +14,7 @@ export const LoginScreen = () => {
         </View>
 
         {/* Text inputs */}
-        <KeyboardAvoidingView 
+        <KeyboardAvoidingView
           style={styles.textInputsContainer}
           behavior={(Platform.OS === 'ios') ? 'padding' : 'height'}>
 
@@ -22,24 +22,24 @@ export const LoginScreen = () => {
             <TextInput
               style={styles.inputContainer}
               keyboardType="email-address"
-              autoCapitalize={"none"}
+              autoCapitalize={'none'}
               autoCorrect={false}
               />
 
             <Text style={styles.textInputTitle}>Password</Text>
-            <TextInput 
-              style={styles.inputContainer} 
+            <TextInput
+              style={styles.inputContainer}
               secureTextEntry={true}/>
 
             {/* Login Button */}
-            <View style={{alignSelf: 'center'}}>
+            <View style={{ alignSelf: 'center' }}>
               <TouchableOpacity style={styles.button}>
-                <Text style={{fontSize: 20, fontWeight: 'bold',color: '#F7F9F9', paddingHorizontal: 10}}>Login</Text>
+                <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#F7F9F9', paddingHorizontal: 10 }}>Login</Text>
               </TouchableOpacity>
             </View>
 
-            <TouchableOpacity style={{alignSelf: 'flex-start', marginTop: 10}}>
-              <Text>Don't have account?Create an account</Text>
+            <TouchableOpacity style={{ alignSelf: 'flex-start', marginTop: 10 }}>
+              <Text>{"Don't have account? Sign up"}</Text>
             </TouchableOpacity>
         </KeyboardAvoidingView>
     </View>
@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#0E9594',
     alignItems: 'center'
   },
-  logoContainer : {
+  logoContainer: {
     width: 200,
     height: 200,
     borderRadius: 100,
@@ -80,14 +80,14 @@ const styles = StyleSheet.create({
   },
   textInputsContainer: {
     flex: 1,
-    marginVertical: 30,
+    marginVertical: 30
   },
   textInputTitle: {
     fontSize: 15,
     color: '#051923'
   },
   button: {
-    width: 170, 
+    width: 170,
     height: 50,
     borderRadius: 100,
     marginTop: 10,

@@ -6,10 +6,10 @@ interface Props {
   value: string
 }
 
-export const InformationText = ({title, value}: Props) => {
+export const InformationText = ({ title, value }: Props) => {
   return (
-    <View style={{flexDirection: 'row'}}>
-        <Text style={{fontSize: 20, marginRight: 5, color: '#000'}}>{title}:</Text>
+    <View style={{ flexDirection: 'row' }}>
+        <Text style={{ fontSize: 20, marginRight: 5, color: '#000' }}>{title}:</Text>
         <Text style={styles.text}>{value}</Text>
     </View>
   )
@@ -21,6 +21,6 @@ const styles = StyleSheet.create({
     marginBottom: 2,
     color: '#000',
     fontSize: 20,
-    fontWeight: 'bold',
+    fontWeight: 'bold'
   }
 })

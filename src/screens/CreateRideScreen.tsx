@@ -1,22 +1,22 @@
-import { Picker } from "@react-native-picker/picker";
-import React, { useState } from "react";
-import { StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
+import { Picker } from '@react-native-picker/picker'
+import React, { useState } from 'react'
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import DateTimePicker, {
-  DateTimePickerEvent,
-} from "@react-native-community/datetimepicker";
+  DateTimePickerEvent
+} from '@react-native-community/datetimepicker'
 
 export const CreateRideScreen = () => {
-  const [myTime, setMyTime] = useState(new Date());
-  const [show, setShow] = useState(false);
+  const [myTime, setMyTime] = useState(new Date())
+  const [show, setShow] = useState(false)
 
   const handleTime = (
     event: DateTimePickerEvent,
     selectedDate?: Date | undefined
   ) => {
-    const currentDate = selectedDate || myTime;
-    setMyTime(currentDate);
-    setShow(false);
-  };
+    const currentDate = selectedDate || myTime
+    setMyTime(currentDate)
+    setShow(false)
+  }
 
   return (
     <View style={styles.container}>
@@ -40,12 +40,12 @@ export const CreateRideScreen = () => {
         {/* Time picker */}
         <Text>Time</Text>
         <Text
-          style={{ fontSize: 30, color: "#051923" }}
+          style={{ fontSize: 30, color: '#051923' }}
           onPress={() => setShow(true)}
         >
           {myTime
             .toLocaleTimeString()
-            .replace(/([\d]+:[\d]{2})(:[\d]{2})(.*)/, "$1$3")}
+            .replace(/([\d]+:[\d]{2})(:[\d]{2})(.*)/, '$1$3')}
         </Text>
         {show && (
           <DateTimePicker
@@ -58,14 +58,14 @@ export const CreateRideScreen = () => {
           />
         )}
         {/* Save button */}
-        <View style={{ alignSelf: "center" }}>
+        <View style={{ alignSelf: 'center' }}>
           <TouchableOpacity style={styles.button}>
             <Text
               style={{
                 fontSize: 20,
-                fontWeight: "bold",
-                color: "#F7F9F9",
-                paddingHorizontal: 10,
+                fontWeight: 'bold',
+                color: '#F7F9F9',
+                paddingHorizontal: 10
               }}
             >
               Save
@@ -74,37 +74,37 @@ export const CreateRideScreen = () => {
         </View>
       </View>
     </View>
-  );
-};
+  )
+}
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 20,
+    padding: 20
   },
   titleText: {
     fontSize: 40,
-    fontWeight: "bold",
-    color: "#127475",
-    alignSelf: "center",
+    fontWeight: 'bold',
+    color: '#127475',
+    alignSelf: 'center'
   },
   inputsContainer: {
-    flex: 1,
+    flex: 1
   },
   pickerContainer: {
     height: 50,
-    backgroundColor: "#F7F9F9",
+    backgroundColor: '#F7F9F9',
     borderRadius: 20,
     borderWidth: 2,
-    borderColor: "#127475",
+    borderColor: '#127475'
   },
   button: {
     width: 170,
     height: 50,
     borderRadius: 100,
     marginTop: 10,
-    backgroundColor: "#DD6E42",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
+    backgroundColor: '#DD6E42',
+    alignItems: 'center',
+    justifyContent: 'center'
+  }
+})
