@@ -1,9 +1,10 @@
 import { Picker } from '@react-native-picker/picker'
 import React, { useState } from 'react'
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
 import DateTimePicker, {
   DateTimePickerEvent
 } from '@react-native-community/datetimepicker'
+import { Button } from '../components/Buttons/Button'
 
 export const CreateRideScreen = () => {
   const [myTime, setMyTime] = useState(new Date())
@@ -59,18 +60,7 @@ export const CreateRideScreen = () => {
         )}
         {/* Save button */}
         <View style={{ alignSelf: 'center' }}>
-          <TouchableOpacity style={styles.button}>
-            <Text
-              style={{
-                fontSize: 20,
-                fontWeight: 'bold',
-                color: '#F7F9F9',
-                paddingHorizontal: 10
-              }}
-            >
-              Save
-            </Text>
-          </TouchableOpacity>
+          <Button title='Save'/>
         </View>
       </View>
     </View>

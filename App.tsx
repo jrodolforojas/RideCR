@@ -1,11 +1,11 @@
 import React from 'react'
 import { View } from 'react-native'
-import { CreateRideScreen } from './src/screens/CreateRideScreen'
+import { LoginScreen } from './src/screens/LoginScreen'
 
 const App = () => {
   return (
     <View style={{ flex: 1, backgroundColor: '#F7F9F9' }}>
-      <CreateRideScreen />
+      <LoginScreen />
     </View>
   )
 }
