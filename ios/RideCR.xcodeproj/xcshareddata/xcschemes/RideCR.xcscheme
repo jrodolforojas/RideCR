@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "RideCR.app"
-               BlueprintName = "RideCR"
-               ReferencedContainer = "container:RideCR.xcodeproj">
+               BuildableName = "ridecr.app"
+               BlueprintName = "ridecr"
+               ReferencedContainer = "container:ridecr.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "RideCRTests.xctest"
-               BlueprintName = "RideCRTests"
-               ReferencedContainer = "container:RideCR.xcodeproj">
+               BuildableName = "ridecrTests.xctest"
+               BlueprintName = "ridecrTests"
+               ReferencedContainer = "container:ridecr.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "RideCR.app"
-            BlueprintName = "RideCR"
-            ReferencedContainer = "container:RideCR.xcodeproj">
+            BuildableName = "ridecr.app"
+            BlueprintName = "ridecr"
+            ReferencedContainer = "container:ridecr.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "RideCR.app"
-            BlueprintName = "RideCR"
-            ReferencedContainer = "container:RideCR.xcodeproj">
+            BuildableName = "ridecr.app"
+            BlueprintName = "ridecr"
+            ReferencedContainer = "container:ridecr.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

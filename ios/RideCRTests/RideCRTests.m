@@ -7,11 +7,11 @@
 #define TIMEOUT_SECONDS 600
 #define TEXT_TO_LOOK_FOR @"Welcome to React"
 
-@interface RideCRTests : XCTestCase
+@interface ridecrTests : XCTestCase
 
 @end
 
-@implementation RideCRTests
+@implementation ridecrTests
 
 - (BOOL)findSubviewInView:(UIView *)view matching:(BOOL (^)(UIView *view))test
 {
