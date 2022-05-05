@@ -43,6 +43,7 @@
 		5DCACB8F33CDC322A6C60F78 /* libPods-ridecr.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ridecr.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ridecr/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-ridecr-ridecrTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ridecr-ridecrTests.release.xcconfig"; path = "Target Support Files/Pods-ridecr-ridecrTests/Pods-ridecr-ridecrTests.release.xcconfig"; sourceTree = "<group>"; };
+		CFDADAEC28242C510086B0E9 /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Ionicons.ttf; path = "../../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -116,6 +117,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				CFDADAE928242B4F0086B0E9 /* Fonts */,
 				13B07FAE1A68108700A75B9A /* ridecr */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* ridecrTests */,
@@ -146,6 +148,14 @@
 				89C6BE57DB24E9ADA2F236DE /* Pods-ridecr-ridecrTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		CFDADAE928242B4F0086B0E9 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CFDADAEC28242C510086B0E9 /* Ionicons.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
