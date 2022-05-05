@@ -2,7 +2,7 @@ import React from 'react'
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import { FadeInImage } from '../components/FadeInImage'
 import { InformationText } from '../components/InformationText'
-import FontAwesome from 'react-native-vector-icons/FontAwesome'
+import Icon from 'react-native-vector-icons/Ionicons'
 
 export const RideInfoScreen = () => {
   return (
@@ -21,7 +21,7 @@ export const RideInfoScreen = () => {
       {/* TODO: Install icon dependencies for IOS */}
       <TouchableOpacity style={{ margin: 20, backgroundColor: '#43AA8B', alignSelf: 'stretch', borderRadius: 10 }}>
         <View style={{ alignItems: 'center', flexDirection: 'row', justifyContent: 'center' }}>
-          <FontAwesome name="whatsapp" style={{ marginRight: 10 }} size={30} color="white" />
+          <Icon name='logo-whatsapp' style={{ marginRight: 10 }} size={30} color="white" />
           <Text style={{ fontSize: 30, fontWeight: 'bold', color: 'white', padding: 10 }}>Contactar</Text>
         </View>
       </TouchableOpacity>

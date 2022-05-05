@@ -1,10 +1,15 @@
+import { useNavigation } from '@react-navigation/core'
 import React from 'react'
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import { FadeInImage } from './FadeInImage'
+import { CommonActions } from '@react-navigation/native'
 
 export const RideCard = () => {
+
+  const navigation = useNavigation()
+
   return (
-    <TouchableOpacity>
+    <TouchableOpacity onPress={() => navigation.dispatch(CommonActions.navigate('RideInfoScreen', {}))}>
         <View style={styles.cardContainer}>
             <View style={{ flexDirection: 'row', alignItems: 'flex-start' }}>
                 <FadeInImage uri={'https://rickandmortyapi.com/api/character/avatar/1.jpeg'} style={styles.profileImage}/>
