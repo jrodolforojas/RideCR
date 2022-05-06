@@ -1,11 +1,17 @@
 import React from 'react'
-import { SafeAreaView, Text, View } from 'react-native'
-import { LoginScreen } from './src/screens/LoginScreen'
+import { SafeAreaView } from 'react-native'
+import { NavigationContainer } from '@react-navigation/native'
+import { TabNavigator } from './src/navigator/TabNavigator'
+import { SignUpNavigator } from './src/navigator/SignUpNavigator'
 
 const App = () => {
+  const authenticated = true
+
   return (
-    <SafeAreaView style={{flex: 1}}>
-      <LoginScreen/>
+    <SafeAreaView style={{ flex: 1 }}>
+      <NavigationContainer>
+        {authenticated ? <TabNavigator/> : <SignUpNavigator/>}
+      </NavigationContainer>
     </SafeAreaView>
   )
 }

@@ -1,3 +1,5 @@
+import android.os.Bundle;
+
 package com.ridecr;
 
 import com.facebook.react.ReactActivity;
@@ -13,6 +15,11 @@ public class MainActivity extends ReactActivity {
   @Override
   protected String getMainComponentName() {
     return "ridecr";
+  }
+
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(null);
   }
 
   /**
