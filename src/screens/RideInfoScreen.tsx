@@ -3,6 +3,11 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import { FadeInImage } from '../components/FadeInImage'
 import { InformationText } from '../components/InformationText'
 import Icon from 'react-native-vector-icons/Ionicons'
+// import { StackScreenProps } from '@react-navigation/stack'
+// import { RootStackParams } from '../types/RootStackParams'
+
+// TODO: handle props parmas between screens
+// interface Props extends StackScreenProps<RootStackParams, 'RideInfoScreen'> {}
 
 export const RideInfoScreen = () => {
   return (

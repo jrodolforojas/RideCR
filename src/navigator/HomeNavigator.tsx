@@ -3,20 +3,15 @@ import { createStackNavigator } from '@react-navigation/stack'
 import { CreateRideScreen } from '../screens/CreateRideScreen'
 import { HomeScreen } from '../screens/HomeScreen'
 import { RideInfoScreen } from '../screens/RideInfoScreen'
+import { HomeStackParams } from '../types/StackParams'
 
-const Stack = createStackNavigator()
+const Stack = createStackNavigator<HomeStackParams>()
 
 export const HomeNavigator = () => {
   return (
     <Stack.Navigator
     screenOptions={{
-      headerStyle: {
-        elevation: 0,
-        shadowColor: 'transparent'
-      },
-      cardStyle: {
-        backgroundColor: 'white'
-      }
+      headerShown: false
     }}>
       <Stack.Screen name="HomeScreen" component={HomeScreen} />
       <Stack.Screen name="RideInfoScreen" component={RideInfoScreen} />
